@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  /* Colors */
+  --bg-color: hsl(47, 88%, 63%);
+  --bg-card: hsl(0, 0%, 100%);
+  --text-foreground: hsl(0, 0%, 7%);
+  --text-muted-foregound: hsl(0, 0%, 40%);
+
+  /* Font */
+  --font-size: 1rem;
+  --font: "Figtree", "sans-serif";
+  --font-weight-500: 500;
+  --font-weight-800: 800;
+}
+
+html {
+  font-family: var(--font);
+  background: var(--bg-color);
+  color: var(--text-foreground);
+  letter-spacing: -0.025rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  max-width: 768px;
+  padding-block: 4rem;
+}
+
+a {
+  color: var(--text-muted-foregound);
+  text-decoration: initial;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0;
+}
+
+p,
+span,
+li a {
+  color: var(--text-muted-foregound);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media (width <= 378px) {
+  body {
+    padding-inline: 1rem;
+  }
+}
+
+@media (width > 420px) and (width <= 720px) {
+  body {
+    padding-inline: 6rem;
+  }
+}
+
+@media (width >= 721px) {
+  body {
+    padding-inline: 12rem;
+  }
+}
