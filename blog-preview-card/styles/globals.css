@@ -29,6 +29,8 @@ body,
 figure {
   margin: 0;
   padding: 0;
+  width: 100%;
+  padding: 2rem;
 }
 
 body {
@@ -80,20 +82,23 @@ li a {
   text-align: center;
 }
 
-@media (width <= 378px) {
+@media (min-width: 768px) {
   body {
-    padding-inline: 1rem;
+    padding-inline: 4rem;
   }
 }
-
-@media (width > 420px) and (width <= 720px) {
+@media (min-width: 1024px) {
   body {
     padding-inline: 6rem;
   }
 }
-
-@media (width >= 721px) {
+@media (min-width: 1280px) {
   body {
-    padding-inline: 12rem;
+    padding-inline: 8rem;
+  }
+}
+@media (min-width: 1536px) {
+  body {
+    padding-inline: 10rem;
   }
 }
