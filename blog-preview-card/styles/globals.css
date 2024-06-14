@@ -29,14 +29,11 @@ body,
 figure {
   margin: 0;
   padding: 0;
-  width: 100%;
   padding: 2rem;
 }
 
 body {
-  width: 100vw;
-  max-width: 768px;
-  padding-block: 4rem;
+  max-width: 640px;
 }
 
 a {
@@ -85,20 +82,24 @@ li a {
 @media (min-width: 768px) {
   body {
     padding-inline: 4rem;
+    max-width: 768px;
   }
 }
 @media (min-width: 1024px) {
   body {
     padding-inline: 6rem;
+    max-width: 1024px;
   }
 }
 @media (min-width: 1280px) {
   body {
     padding-inline: 8rem;
+    max-width: 1280px;
   }
 }
 @media (min-width: 1536px) {
   body {
     padding-inline: 10rem;
+    max-width: 1536px;
   }
 }
