@@ -16,6 +16,7 @@ export default {
         foreground: "var(--foreground)",
         card: "var(--card)",
         border: "var(--border)",
+        skeleton: "var(--skeleton)",
       }
     },
   },
