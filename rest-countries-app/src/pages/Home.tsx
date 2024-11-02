@@ -12,6 +12,9 @@ type Country = {
   region: string;
   capital: string;
   population: number
+  maps: {
+    googleMaps: string;
+  }
 };
 
 export default function Home() {
@@ -36,6 +39,7 @@ export default function Home() {
               region={country.region}
               capital={country.capital}
               population={country.population}
+              map={country.maps.googleMaps}
             />
           </li>
         ))}

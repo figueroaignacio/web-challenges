@@ -6,14 +6,15 @@ interface CountryCardProps {
   capital: string;
   region: string;
   population: number;
+  map: string;
 }
 
-export function CountryCard({region, population, flag, capital, name}: CountryCardProps) {
+export function CountryCard({region, population, flag, capital, name, map}: CountryCardProps) {
   return (
     <div className="bg-card border shadow-md p-4 rounded-lg space-y-5">
       <div>
         <img src={flag} alt={name} className="w-full h-60 rounded-md"/>
-        <h3 className="text-3xl my-3 font-bold">{name}</h3>
+        <h3 className="text-2xl my-3 font-bold line-clamp-1">{name}</h3>
       </div>
       <div className="space-y-2">
         <p>Capital: {capital}</p>
@@ -22,13 +23,13 @@ export function CountryCard({region, population, flag, capital, name}: CountryCa
       </div>
       <div className="flex justify-center gap-x-2">
         <button className="border w-full p-1 rounded-md flex justify-center items-center gap-3">
-          <VisitLink/>
           Details
+          <VisitLink/>
         </button>
-        <button className="border w-full p-1 rounded-md flex justify-center items-center gap-3">
-          <Location/>
+        <a className="border w-full p-1 rounded-md flex justify-center items-center gap-3" href={map} target="_blank">
           See in map
-        </button>
+          <Location/>
+        </a>
       </div>
     </div>
   )
