@@ -8,7 +8,7 @@
         --foreground: hsl(0, 0%, 31%);
         --card: hsl(210, 37%, 95%);
         --border: hsl(240, 15%, 90%);
-        --skeleton: hsl(0, 0%, 80%);
+        --skeleton: rgb(209 213 219);
     }
 
     .dark {

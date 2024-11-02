@@ -14,7 +14,7 @@ export function CountryCard({region, population, flag, capital, name, map}: Coun
   return (
     <div className="bg-card border-border border-[1px] p-4 rounded-lg space-y-5">
       <div>
-        <img src={flag} alt={name} className="w-full h-40   rounded-md"/>
+        <img src={flag} alt={name} className="w-full h-40 rounded-md"/>
         <h3 className="text-2xl my-3 font-bold line-clamp-1">{name}</h3>
       </div>
       <div className="space-y-2">
