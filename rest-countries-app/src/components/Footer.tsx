@@ -1,7 +1,7 @@
 export function Footer() {
   return (
-    <footer>
-      This is the footer
+    <footer className="py-12 text-center">
+      <h3>Coded by <a href="https://ignaiofigueroa.vercel.app">Ignacio Figueroa</a></h3>
     </footer>
   )
 }
