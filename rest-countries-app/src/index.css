@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --background: #f3f6fb;
+    --foreground: #505050;
+    --card: #f3f6fb;
+    --border: #e3e3e7;
+}
+
+.dark {
+    --background: #09090b;
+    --foreground: #fafafa;
+    --card: #09090b;
+    --border: #ffffff0c;
+}
+
+
+@layer base {
+    body {
+        @apply bg-background text-foreground border-border;
+    }
+}

@@ -84,22 +84,3 @@ li a {
   font-size: 0.75rem;
   text-align: center;
 }
-
-/* 
-@media (width <= 378px) {
-  body {
-    padding-inline: 1rem;
-  }
-}
-
-@media (width > 420px) and (width <= 720px) {
-  body {
-    padding-inline: 6rem;
-  }
-}
-
-@media (width >= 721px) {
-  body {
-    padding-inline: 12rem;
-  }
-} */
