@@ -6,7 +6,7 @@ export const routes = [
     element: <Home/>
   },
   {
-    path: "/country-details/:countryId",
+    path: "/country-details/:countryName",
     element: <CountryDetails/>
   },
 ]

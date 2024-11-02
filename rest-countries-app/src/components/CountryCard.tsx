@@ -1,4 +1,5 @@
 import {Location, VisitLink} from "./Icons.tsx";
+import {Link} from "react-router-dom";
 
 interface CountryCardProps {
   flag: string
@@ -22,10 +23,11 @@ export function CountryCard({region, population, flag, capital, name, map}: Coun
         <p>Population: {population}</p>
       </div>
       <div className="flex justify-center gap-x-2">
-        <button className="border-border border-[1px] w-full p-1 rounded-md flex justify-center items-center gap-3">
+        <Link to={`/country-details/${name}`}
+              className="border-border border-[1px] w-full p-1 rounded-md flex justify-center items-center gap-3">
           Details
           <VisitLink/>
-        </button>
+        </Link>
         <a className="border-border border-[1px] w-full p-1 rounded-md flex justify-center items-center gap-3"
            href={map}
            target="_blank">

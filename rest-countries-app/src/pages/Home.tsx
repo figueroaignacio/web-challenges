@@ -1,21 +1,7 @@
 import {API} from "../config/api.ts";
 import useFetch from "../hooks/useFetch.ts";
 import {CountryCard} from "../components/CountryCard.tsx";
-
-type Country = {
-  flags: {
-    png: string
-  }
-  name: {
-    common: string;
-  };
-  region: string;
-  capital: string;
-  population: number
-  maps: {
-    googleMaps: string;
-  }
-};
+import {Country} from "../types";
 
 export default function Home() {
   const {data: countries, loading, error} = useFetch(API.ALL_COUNTRIES);
