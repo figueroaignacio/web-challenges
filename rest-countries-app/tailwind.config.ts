@@ -8,8 +8,8 @@ export default {
     './src/components/**/*.{html,js}',
 
   ],
-
   theme: {
+    darkMode: 'class',
     extend: {
       colors: {
         background: "var(--background)",

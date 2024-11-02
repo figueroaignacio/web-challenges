@@ -11,9 +11,9 @@ interface CountryCardProps {
 
 export function CountryCard({region, population, flag, capital, name, map}: CountryCardProps) {
   return (
-    <div className="bg-card border shadow-md p-4 rounded-lg space-y-5">
+    <div className="bg-card border-border border-[1px] p-4 rounded-lg space-y-5">
       <div>
-        <img src={flag} alt={name} className="w-full h-60 rounded-md"/>
+        <img src={flag} alt={name} className="w-full h-40   rounded-md"/>
         <h3 className="text-2xl my-3 font-bold line-clamp-1">{name}</h3>
       </div>
       <div className="space-y-2">
@@ -22,11 +22,13 @@ export function CountryCard({region, population, flag, capital, name, map}: Coun
         <p>Population: {population}</p>
       </div>
       <div className="flex justify-center gap-x-2">
-        <button className="border w-full p-1 rounded-md flex justify-center items-center gap-3">
+        <button className="border-border border-[1px] w-full p-1 rounded-md flex justify-center items-center gap-3">
           Details
           <VisitLink/>
         </button>
-        <a className="border w-full p-1 rounded-md flex justify-center items-center gap-3" href={map} target="_blank">
+        <a className="border-border border-[1px] w-full p-1 rounded-md flex justify-center items-center gap-3"
+           href={map}
+           target="_blank">
           See in map
           <Location/>
         </a>

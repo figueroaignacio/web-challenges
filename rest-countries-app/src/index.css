@@ -2,24 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --background: hsl(210, 37%, 95%);
+        --foreground: hsl(0, 0%, 31%);
+        --card: hsl(210, 37%, 95%);
+        --border: hsl(240, 15%, 90%);
+    }
 
-:root {
-    --background: #f3f6fb;
-    --foreground: #505050;
-    --card: #f3f6fb;
-    --border: #e3e3e7;
-}
-
-.dark {
-    --background: #09090b;
-    --foreground: #fafafa;
-    --card: #09090b;
-    --border: #ffffff0c;
+    .dark {
+        --background: hsl(240, 15%, 3%);
+        --foreground: hsl(0, 0%, 98%);
+        --card: hsl(240, 15%, 3%);
+        --border: hsl(240, 5%, 17%);
+    }
 }
 
 
 @layer base {
     body {
-        @apply bg-background text-foreground border-border;
+        @apply bg-background text-foreground;
     }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+
+::view-transition-old(root) {
+    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out
+}
+
+::view-transition-new(root) {
+    animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in
 }
