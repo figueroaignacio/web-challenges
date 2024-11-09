@@ -1,30 +1,42 @@
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { BackButton } from "../components/BackButton.tsx";
+import { CountryDetailsLoader } from "../components/CountryDetailsLoader.tsx";
+import { Location } from "../components/Icons.tsx";
+import { API } from "../config/api.ts";
 import useFetch from "../hooks/useFetch";
-import {API} from "../config/api.ts";
-import {Country} from "../types";
-import {BackButton} from "../components/BackButton.tsx";
-import {CountryDetailsLoader} from "../components/CountryDetailsLoader.tsx";
-import {Location} from "../components/Icons.tsx";
-
+import { Country } from "../types";
 
 export default function CountryDetails() {
-  const {countryName} = useParams<{ countryName: string }>();
-  const {data: country, loading, error} = useFetch<Country[]>(`${API.COUNTRY_NAME}/${countryName}`);
+  const { countryName } = useParams<{ countryName: string }>();
+  const {
+    data: country,
+    loading,
+    error,
+  } = useFetch<Country[]>(`${API.COUNTRY_NAME}/${countryName}`);
 
   if (loading) {
-    return <CountryDetailsLoader/>;
+    return <CountryDetailsLoader />;
   }
 
-  if (error) return <div className="text-center text-red-500 text-xl mt-8">Error loading country details</div>;
+  if (error)
+    return (
+      <div className="text-center text-red-500 text-xl mt-8">
+        Error loading country details
+      </div>
+    );
 
   if (!country || country.length === 0) {
-    return <div className="text-center text-gray-500 text-xl mt-8">No country found</div>;
+    return (
+      <div className="text-center text-gray-500 text-xl mt-8">
+        No country found
+      </div>
+    );
   }
 
   return (
     <section className="max-w-4xl mx-auto py-8">
       <div className="mb-8 max-w-52">
-        <BackButton/>
+        <BackButton />
       </div>
       <div className="rounded-lg overflow-hidden">
         <div className="relative h-64 md:h-96">
@@ -34,41 +46,74 @@ export default function CountryDetails() {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-white text-center">{country[0].name.official}</h1>
+            <h1 className="text-4xl font-bold text-white text-center">
+              {country[0].name.official}
+            </h1>
           </div>
         </div>
         <div className="py-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h2 className="text-xl font-semibold mb-4">General Information</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                General Information
+              </h2>
               <ul className="space-y-2">
-                <li><span className="font-medium">Capital:</span> {country[0].capital}</li>
-                <li><span className="font-medium">Population:</span> {country[0].population.toLocaleString()}</li>
-                <li><span className="font-medium">Region:</span> {country[0].region}</li>
-                <li><span className="font-medium">Subregion:</span> {country[0].subregion}</li>
+                <li>
+                  <span className="font-medium">Capital:</span>{" "}
+                  {country[0].capital}
+                </li>
+                <li>
+                  <span className="font-medium">Population:</span>{" "}
+                  {country[0].population.toLocaleString()}
+                </li>
+                <li>
+                  <span className="font-medium">Region:</span>{" "}
+                  {country[0].region}
+                </li>
+                <li>
+                  <span className="font-medium">Subregion:</span>{" "}
+                  {country[0].subregion}
+                </li>
               </ul>
             </div>
             <div>
               <h2 className="text-xl font-semibold mb-4">Additional Details</h2>
               <ul className="space-y-2">
-                <li><span className="font-medium">Top level domains:</span> {country[0].tld?.join(', ')}</li>
+                <li>
+                  <span className="font-medium">Top level domains:</span>{" "}
+                  {country[0].topLevelDomain &&
+                  country[0].topLevelDomain.length > 0
+                    ? country[0].topLevelDomain.join(", ")
+                    : "No data available"}
+                </li>
                 <li>
                   <span className="font-medium">Currencies:</span>{" "}
-                  {Object.values(country[0].currencies)
-                    .map(currency => `${currency.name} (${currency.symbol})`)
-                    .join(', ')}
+                  {country[0].currencies
+                    ? Object.values(country[0].currencies)
+                        .map(
+                          (currency) => `${currency.name} (${currency.symbol})`
+                        )
+                        .join(", ")
+                    : "No data available"}
                 </li>
-                <li><span className="font-medium">Languages:</span> {Object.values(country[0].languages).join(', ')}
+                <li>
+                  <span className="font-medium">Languages:</span>{" "}
+                  {country[0].languages
+                    ? Object.values(country[0].languages).join(", ")
+                    : "No data available"}
                 </li>
               </ul>
             </div>
           </div>
           <div className="mt-6">
             <h2 className="text-xl font-semibold mb-4">Bordering Countries</h2>
-            {country[0].borders?.length > 0 ? (
+            {country[0].borders && country[0].borders.length > 0 ? (
               <ul className="flex flex-wrap gap-2">
                 {country[0].borders.map((border: string, index: number) => (
-                  <li key={index} className="border border-border text-sm font-medium px-3 py-1 rounded-full">
+                  <li
+                    key={index}
+                    className="border border-border text-sm font-medium px-3 py-1 rounded-full"
+                  >
                     {border}
                   </li>
                 ))}
@@ -84,7 +129,7 @@ export default function CountryDetails() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Location/>
+              <Location />
               Visit on Google Maps
             </a>
           </div>
