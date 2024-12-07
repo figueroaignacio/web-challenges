@@ -12,6 +12,7 @@ export default {
         secondary: {
           DEFAULT: "var(--secondary)",
         },
+        border: "var(--border)",
       },
     },
   },
