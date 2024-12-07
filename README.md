@@ -6,7 +6,6 @@ Welcome to the **Web Challenges Repository**! This repository serves as a collec
 
 - [About](#about)
 - [Technologies](#technologies)
-- [How to Use](#how-to-use)
 - [Contributing](#contributing)
 - [Contact](#contact)
 
@@ -36,18 +35,6 @@ The challenges in this repository involve a variety of tools and technologies, s
 - **TypeScript**
 - **Next.js**
 - And more, depending on the challenge.
-
-## How to Use
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/web-challenges-repo.git
-   ```
-2. Navigate to a challenge folder:
-   ```bash
-   cd web-challenges-repo/challenge-name
-   ```
-3. Follow the instructions in the specific challenge's `README.md` to set up and run the project.
 
 ## Contributing
 
