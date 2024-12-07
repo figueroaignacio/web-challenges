@@ -3,11 +3,13 @@ import { Footer, Hero, Spotlights } from "./sections";
 
 export default function App() {
   return (
-    <main>
+    <div className="container mx-auto px-5 lg:px-0 py-8">
       <Header />
-      <Hero />
-      <Spotlights />
+      <main>
+        <Hero />
+        <Spotlights />
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }
