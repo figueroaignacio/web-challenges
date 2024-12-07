@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background: hsl(193, 100%, 96%);
+  --foreground: hsl(208, 11%, 55%);
+  --primary: hsl(322, 100%, 66%);
+  --secondary: hsl(192, 100%, 9%);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-secondary;
+  }
+}
