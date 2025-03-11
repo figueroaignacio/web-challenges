@@ -1,10 +1,18 @@
-import { Header } from "./components/header";
+// Pages
+import { Route, Routes } from "react-router";
+import { CountryDetails } from "./pages/country-details";
+import { Home } from "./pages/home";
+
+// Layout
+import { Layout } from "./layout/layout";
 
 export default function App() {
   return (
-    <h1>
-      <Header />
-      <main className="max-w-6xl mx-auto min-h-dvh px-3">asdsd</main>
-    </h1>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index path="/" element={<Home />} />
+        <Route path="/country:id" element={<CountryDetails />} />
+      </Route>
+    </Routes>
   )
 }
