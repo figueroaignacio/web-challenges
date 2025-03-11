@@ -29,7 +29,7 @@ export type Country = {
       symbol: string;
     };
   };
-  languages: {
+  languages?: {
     [key: string]: string;
   };
   borders?: string[]; 
