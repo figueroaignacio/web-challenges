@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { CountryCard } from "../components/country-card"
+import { CountryCardLoader } from "../components/country-card-loader"
 import { Seo } from "../components/seo"
 import { API_URL } from "../lib/constants"
 import { Country } from "../lib/definitions"
@@ -27,7 +28,18 @@ export function Home(){
     getCountries()
   }, [])
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-3">
+      {Array.from({length: 10}).map((_, index) => (
+        <li key={index}>
+         <CountryCardLoader />
+        </li>
+      ))}
+    </ul>
+    )
+  }
+
   if (error) return <div>Error: {error}</div>;
   if (!countries) return <div>Country not found</div>;
 
@@ -37,7 +49,8 @@ export function Home(){
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-3">
         {countries.map((country, index) => (
           <li key={index}>
-            <CountryCard capital={country.capital} 
+            <CountryCard 
+              capital={country.capital} 
               flags={country.flags} 
               name={country.name} 
               population={country.population} 

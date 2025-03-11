@@ -14,6 +14,7 @@
   --foreground: hsl(214, 13%, 10%);
   --card: hsl(0, 0%, 100%);
   --border: hsl(214, 13%, 80%);
+  --muted: hsl(220, 14%, 88%);
 }
 
 .dark {
@@ -21,6 +22,7 @@
   --foreground: hsl(214, 13%, 90%);
   --card: hsl(214, 13%, 14%);
   --border: hsl(214, 13%, 20%);
+  --muted: hsl(214, 13%, 19%);
 }
 
 @theme inline {
@@ -28,6 +30,7 @@
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-border: var(--border);
+  --color-muted: var(--muted)
 }
 
 @layer base {
