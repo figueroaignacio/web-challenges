@@ -51,7 +51,7 @@ export function CountryDetails() {
 
   return (
     <>
-      <Seo title={country.name.common} description={country.flags.alt || "No description available"} />
+      <Seo title={`${country.name.common} - Rest Countries App`} description={country.flags.alt || "No description available"} />
       <BackButton />
       <article className="grid grid-cols-1 gap-8 lg:grid-cols-12 items-center">
         <div className="lg:col-span-6">
