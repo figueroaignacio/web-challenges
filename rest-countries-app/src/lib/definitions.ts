@@ -8,4 +8,8 @@ export type Country = {
   population: number;
   region: string;
   capital: string;
+  maps: {
+    googleMaps: string;
+  }
+  slug: string
 }

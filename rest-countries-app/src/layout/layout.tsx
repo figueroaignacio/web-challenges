@@ -5,7 +5,7 @@ export function Layout() {
   return (
     <>
       <Header />
-      <main className="max-w-6xl mx-auto min-h-dvh px-3">
+      <main className="max-w-6xl mx-auto min-h-dvh px-3 my-12 mb-52">
         <Outlet />
       </main>
     </>
