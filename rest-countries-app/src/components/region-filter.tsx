@@ -1,42 +1,30 @@
-import { useState } from "react";
 import { Country } from "../lib/definitions";
 
 interface RegionFilterProps {
   countries: Country[];
-  onFilterChange: (filteredCountries: Country[]) => void;
+  selectedRegion: string;
+  onRegionChange: (region: string) => void;
 }
 
-export function RegionFilter({ countries, onFilterChange }: RegionFilterProps) {
-  const [selectedRegion, setSelectedRegion] = useState<string>("");
-  
-  // Obtener todas las regiones únicas de los países
+export function RegionFilter({ countries, selectedRegion, onRegionChange }: RegionFilterProps) {
   const regions = Array.from(new Set(countries.map(country => country.region)))
-    .filter(region => region) // Eliminar valores vacíos
-    .sort(); // Ordenar alfabéticamente
+    .filter(region => region) 
+    .sort(); 
   
   const handleRegionClick = (region: string) => {
-    // Si ya está seleccionada, deseleccionar
     const newRegion = selectedRegion === region ? "" : region;
-    setSelectedRegion(newRegion);
-    
-    // Filtrar países por la región seleccionada
-    const filteredCountries = newRegion 
-      ? countries.filter(country => country.region === newRegion)
-      : countries;
-    
-    onFilterChange(filteredCountries);
+    onRegionChange(newRegion);
   };
   
   return (
     <div className="mb-8">
-      <p className="mb-5">Filter by Region</p>
       <div className="flex flex-wrap gap-2">
         <button
           onClick={() => handleRegionClick("")}
-          className={`px-4 py-2 rounded-xl transition-colors border-border border ${
+          className={`px-4 py-1 rounded-xl transition-colors border-border border ${
             selectedRegion === "" 
-               ? "bg-muted" 
-               : "bg-card"
+              ? "bg-muted" 
+              : "bg-card hover:bg-muted"
           }`}
           aria-pressed={selectedRegion === ""}
         >
@@ -47,7 +35,7 @@ export function RegionFilter({ countries, onFilterChange }: RegionFilterProps) {
           <button
             key={region}
             onClick={() => handleRegionClick(region)}
-            className={`px-4 py-2 rounded-xl transition-colors border-border border ${
+            className={`px-4 py-1 rounded-xl transition-colors border-border border ${
               selectedRegion === region 
                 ? "bg-muted" 
                 : "bg-card hover:bg-muted"
