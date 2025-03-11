@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+:root {
+  --background: hsl(0, 0%, 98%);
+  --foreground: hsl(214, 13%, 10%);
+  --card: hsl(0, 0%, 100%);
+  --border: hsl(214, 13%, 80%);
+}
+
+.dark {
+  --background: hsl(214, 13%, 10%);
+  --foreground: hsl(214, 13%, 90%);
+  --card: hsl(240, 6%, 10%);
+  --border: hsl(214, 13%, 20%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
