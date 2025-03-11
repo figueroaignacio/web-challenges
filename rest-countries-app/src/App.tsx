@@ -1,3 +1,6 @@
+// Providers
+import { ThemeProvider } from "./contexts/theme-provider";
+
 // Pages
 import { Route, Routes } from "react-router";
 import { CountryDetails } from "./pages/country-details";
@@ -8,11 +11,13 @@ import { Layout } from "./layout/layout";
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route index path="/" element={<Home />} />
-        <Route path="/country:id" element={<CountryDetails />} />
-      </Route>
-    </Routes>
+    <ThemeProvider>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index path="/" element={<Home />} />
+          <Route path="/country:id" element={<CountryDetails />} />
+        </Route>
+      </Routes>
+    </ThemeProvider>
   )
 }
