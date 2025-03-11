@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { BackButton } from "../components/back-button";
+import { CountryDetailsLoader } from "../components/country-details-loader";
 import { Seo } from "../components/seo";
 import { API_URL_BY_NAME } from "../lib/constants";
 import { Country } from "../lib/definitions";
@@ -31,7 +32,8 @@ export function CountryDetails() {
     getCountry();
   }, [slug]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <CountryDetailsLoader />;
+  
   if (error) return <div>Error: {error}</div>;
   if (!country) return <div>Country not found</div>;
 
