@@ -1,7 +1,13 @@
+import { Header } from "./components/header";
+import { Hero } from "./sections/hero";
+
 export function App() {
   return (
-    <main>
-      <h1>Hola</h1>
-    </main>
+    <>
+      <Header />
+      <main>
+        <Hero />
+      </main>
+    </>
   );
 }
