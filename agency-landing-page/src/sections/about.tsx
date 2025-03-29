@@ -23,15 +23,15 @@ export function About() {
           <div
             className={`${
               item.img
-            } w-full h-80 lg:h-[30rem] bg-cover bg-center bg-no-repeat ${
+            } w-full h-80 lg:h-auto bg-cover bg-center bg-no-repeat ${
               index === 0 ? "lg:order-1" : ""
             }`}
           />
-          <div className="p-6 lg:px-24 space-y-5 text-center lg:flex lg:flex-col lg:justify-center lg:text-start">
+          <div className="p-6 lg:px-32 lg:py-40 space-y-5 text-center lg:flex lg:flex-col lg:justify-center lg:text-start">
             <h2 className="text-3xl font-bold">{item.title}</h2>
             <p className="text-black/70">{item.description}</p>
             <button
-              className={`w-full rounded-full py-4 cursor-pointer hover:scale-[1.02] transition-transform duration-100 ${item.buttonVariant}`}
+              className={`justify-start rounded-full py-4 cursor-pointer hover:scale-[1.02] transition-transform duration-100 ${item.buttonVariant}`}
             >
               Learn More
             </button>

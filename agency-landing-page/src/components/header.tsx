@@ -56,6 +56,9 @@ export function Header() {
               </a>
             </li>
           ))}
+          <button className="bg-[#3ebfff] text-white lg:bg-white px-6 py-2 rounded-full lg:text-black font-bold cursor-pointer">
+            Contact
+          </button>
         </ul>
       </nav>
     </header>
