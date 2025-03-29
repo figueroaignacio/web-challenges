@@ -1,6 +1,6 @@
 import { Header } from "./components/header";
 import { About } from "./sections/about";
-import { Features } from "./sections/features";
+import { Services } from "./sections/features";
 import { Hero } from "./sections/hero";
 
 export function App() {
@@ -10,7 +10,7 @@ export function App() {
       <main>
         <Hero />
         <About />
-        <Features />
+        <Services />
       </main>
     </>
   );

@@ -1,4 +1,4 @@
-export function Features() {
+export function Services() {
   const items = [
     {
       img: "bg-[url(/images/mobile/image-graphic-design.jpg)] lg:bg-[url(/images/desktop/image-graphic-design.jpg)]",
