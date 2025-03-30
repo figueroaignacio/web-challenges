@@ -50,13 +50,13 @@ export function Header() {
             <li onClick={() => setIsOpen(!isOpen)}>
               <a
                 href={link.href}
-                className="hover:underline text-lg font-bold md:text-base"
+                className="hover:underline text-lg font-bold md:text-base text-black"
               >
                 {link.label}
               </a>
             </li>
           ))}
-          <button className="bg-[#3ebfff] text-white lg:bg-white px-6 py-2 rounded-full lg:text-black font-bold cursor-pointer">
+          <button className="bg-[#3ebfff] text-white px-6 py-2 rounded-full  font-bold cursor-pointer">
             Contact
           </button>
         </ul>
