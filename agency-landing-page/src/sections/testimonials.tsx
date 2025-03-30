@@ -21,13 +21,13 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="min-h-dvh flex flex-col justify-center items-center px-6">
-      <h2 className="text-xl mt-5 lg:text-4xl text-black/70 text-center font-bold">
+    <section className="min-h-dvh flex flex-col justify-center items-center px-2">
+      <h2 className="text-xl my-12 lg:text-4xl text-black/70 text-center font-bold">
         CLIENT TESTIMONIALS
       </h2>
       <ul className="space-y-6 lg:space-y-0 lg:flex justify-center items-center h-auto gap-2 max-w-7xl mx-auto ">
         {testimonials.map((item) => (
-          <li className="flex flex-col text-center items-center gap-y-12 p-14 shadow-md h-auto rounded-xl">
+          <li className="flex flex-col text-center items-center gap-y-12 p-14 shadow-md h-auto rounded-xl border border-black/20">
             <img
               src={item.avatar}
               alt={item.name}
