@@ -1,0 +1,19 @@
+.attribution {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+
+  & a {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .attribution {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+}
