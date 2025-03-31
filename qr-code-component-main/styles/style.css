@@ -60,14 +60,21 @@ body {
 }
 
 .attribution {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  font-size: 0.875rem;
   color: var(--foreground);
-  margin: 1rem 0 0 0;
+
+  & a {
+    text-decoration: underline;
+  }
 }
 
-.attribution a {
-  text-decoration: underline;
-}
-
-.attribution a:hover {
-  color: var(--accent);
+@media (max-width: 768px) {
+  .attribution {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
 }
