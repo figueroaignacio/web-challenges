@@ -85,7 +85,8 @@ main {
     width: fit-content;
     padding: 0.75rem 2rem;
     border-radius: 6.1875rem;
-    font-weight: bold;
+    font-weight: 500;
+    font-family: var(--lexend-deca-font);
     border: 3px solid transparent;
     transition: background, scale 0.1s ease;
 
