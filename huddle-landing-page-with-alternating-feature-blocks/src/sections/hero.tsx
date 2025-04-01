@@ -15,7 +15,7 @@ export function Hero() {
         </button>
       </div>
       <picture className="flex justify-center items-center">
-        <img src="/public/images/illustration-mockups.svg" alt="Hero" />
+        <img src="/images/illustration-mockups.svg" alt="Hero" />
       </picture>
     </section>
   );

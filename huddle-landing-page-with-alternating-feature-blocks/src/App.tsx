@@ -1,3 +1,4 @@
+import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { Features } from "./sections/features";
 import { Hero } from "./sections/hero";
@@ -10,6 +11,7 @@ export default function App() {
         <Hero />
         <Features />
       </main>
+      <Footer />
     </>
   );
 }

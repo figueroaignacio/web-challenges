@@ -32,6 +32,6 @@ h3 {
   @apply font-poppins;
 }
 
-svg {
-  @apply size-12 lg:size-full;
+header > svg {
+  @apply size-12;
 }
