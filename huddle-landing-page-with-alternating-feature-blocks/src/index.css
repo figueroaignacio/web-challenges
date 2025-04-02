@@ -32,6 +32,11 @@ h3 {
   @apply font-poppins;
 }
 
-header > svg {
-  @apply size-12;
+header div > svg,
+footer div > svg {
+  @apply size-12 lg:w-full;
+}
+
+footer div > svg {
+  @apply invert-10;
 }

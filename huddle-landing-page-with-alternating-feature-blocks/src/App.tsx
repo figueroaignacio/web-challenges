@@ -1,3 +1,4 @@
+import { Cta } from "./components/cta";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { Features } from "./sections/features";
@@ -11,6 +12,7 @@ export default function App() {
         <Hero />
         <Features />
       </main>
+      <Cta />
       <Footer />
     </>
   );

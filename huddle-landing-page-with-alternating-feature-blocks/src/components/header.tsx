@@ -2,7 +2,7 @@ import { Logo } from "./logo";
 
 export function Header() {
   return (
-    <header className="flex justify-between items-center px-6 py-3 lg:px-12 lg:py-6 sticky inset-0 backdrop-blur-md">
+    <header className="flex justify-between items-center px-6 py-3 lg:px-12 lg:py-6 sticky inset-0 backdrop-blur-md z-50">
       <div>
         <Logo />
       </div>
