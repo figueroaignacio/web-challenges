@@ -1,34 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Social links profile</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
-
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Ignacio Figueroa | Social links profile</title>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <img
+          src="https://github.com/figueroaignacio.png"
+          alt="Ignacio's avatar"
+          class="card__avatar"
+        />
+        <div>
+          <h1 class="card__title">Ignacio Figueroa</h1>
+          <h2 class="card__location">Argentina, Buenos Aires</h2>
+        </div>
+        <p class="card__description">
+          "Full-stack developer and a great mate drinker"
+        </p>
+        <ul class="card__list">
+          <li class="card__item">
+            <a
+              href="https://github.com/figueroaignacio"
+              class="card__anchor"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </li>
+          <li class="card__item">
+            <a
+              href="https://www.linkedin.com/in/figueroa-ignacio"
+              class="card__anchor"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li class="card__item">
+            <a
+              href="https://ignaciofigueroa.vercel.app"
+              class="card__anchor"
+              target="_blank"
+            >
+              Portfolio
+            </a>
+          </li>
+          <li class="card__item">
+            <a
+              href="https://www.frontendmentor.io/profile/figueroaignacio"
+              class="card__anchor"
+              target="_blank"
+            >
+              Frontend Mentor
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
 </html>
