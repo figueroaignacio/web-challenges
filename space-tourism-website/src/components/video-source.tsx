@@ -6,7 +6,7 @@ export function VideoSource({ source }: { source: string }) {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover opacity-50"
         preload="auto"
       >
         <source src={source} type="video/webm" />

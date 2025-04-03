@@ -19,7 +19,7 @@ export function Header() {
   return (
     <header className="flex justify-between items-center py-4 px-6 md:px-0 md:pl-12">
       <Logo />
-      <nav className="hidden md:block backdrop-blur-md px-56 py-5">
+      <nav className="hidden md:block backdrop-blur-md lg:px-56 md:pr-12 lg:pr-24 py-5">
         <ul className="flex space-x-12">
           {navigation.map((item, index) => (
             <li key={index}>
