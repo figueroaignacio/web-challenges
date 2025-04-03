@@ -11,7 +11,7 @@ export function Crew() {
   return (
     <>
       <Seo title="Space Tourism - Crew" description="Meet your crew" />
-      <VideoSource source="/videos/video1.webm" />
+      <VideoSource source="/videos/video3.webm" />
       <section> 
         <h1 className="text-center lg:text-start mb-4 pb-4 text-3xl border-b border-white/10">
           02 <span>Meet your crew</span>
