@@ -5,8 +5,7 @@ export function Layout() {
   return (
     <>
       <Header />
-      <h2>asfsad</h2>
-      <main>
+      <main className="max-w-7xl mx-auto min-h-[80dvh]">
         <Outlet />
       </main>
     </>

@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+:root {
+  --foreground: #f5f5f5;
+}
+
+@theme inline {
+  --color-foreground: var(--foreground);
+}
+
+@layer {
+  body {
+    @apply text-foreground;
+  }
+}
