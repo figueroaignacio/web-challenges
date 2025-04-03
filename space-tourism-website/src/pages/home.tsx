@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { Seo } from "../components/seo";
 import { VideoSource } from "../components/video-source";
 
 // * This is how to use json in javascript
@@ -12,6 +13,10 @@ import { VideoSource } from "../components/video-source";
 export function Home() {
   return (
     <>
+      <Seo
+        title="Space Tourism - Home"
+        description="Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!"
+      />
       <VideoSource source="/videos/video1.webm" />
       <section className="grid text-center lg:text-start place-items-center lg:grid-cols-2 min-h-[80dvh] gap-y-12">
         <div className="space-y-3">
