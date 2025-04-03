@@ -19,7 +19,6 @@ export function Header() {
   return (
     <header className="flex justify-between items-center py-4 px-6 md:px-0 md:pl-12">
       <Logo />
-      <div className="w-96 h-[5px]"></div>
       <nav className="hidden md:block backdrop-blur-md px-56 py-5">
         <ul className="flex space-x-12">
           {navigation.map((item, index) => (
@@ -55,11 +54,6 @@ export function Header() {
             <li
               key={index}
               className="transform transition-all duration-300 ease-in-out"
-              style={{
-                opacity: isOpen ? 1 : 0,
-                transform: isOpen ? "translateX(0)" : "translateX(20px)",
-                transitionDelay: `${index * 75}ms`,
-              }}
             >
               <Link
                 to={item.href}
