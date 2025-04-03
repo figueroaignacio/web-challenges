@@ -1,6 +1,6 @@
 export function VideoSource({ source }: { source: string }) {
   return (
-    <div className="absolute inset-0 w-full h-full bg-black -z-50">
+    <div className="fixed inset-0 w-full h-full bg-black -z-50 animate-fade-in">
       <video
         autoPlay
         loop

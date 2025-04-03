@@ -4,12 +4,23 @@
   --foreground: #f5f5f5;
 }
 
-@theme inline {
+@theme {
   --color-foreground: var(--foreground);
+
+  --animate-fade-in: fadeIn 0.6s ease-in-out forwards;
 }
 
 @layer {
   body {
-    @apply text-foreground;
+    @apply text-foreground bg-black;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
