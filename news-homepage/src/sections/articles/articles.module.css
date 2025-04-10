@@ -1,0 +1,39 @@
+.articles {
+  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.articleCard {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.articleImg {
+  width: 10rem;
+  height: 10rem;
+}
+
+.articleCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  & span {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-grayish-blue);
+  }
+
+  & h2 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  & p {
+    color: var(--color-dark-grayish-blue);
+  }
+}
