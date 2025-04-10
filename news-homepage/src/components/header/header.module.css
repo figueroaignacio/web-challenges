@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+.nav {
+  position: absolute;
+  inset: 0;
+  left: 30%;
+  display: none;
+  flex-direction: column;
+  background-color: white;
+}
+
+.navOpen {
+  display: flex;
+}
+
+.navClosed {
+  display: none;
+}
+
+.closeMenuButton {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  padding-block: 1.28rem;
+  padding-right: 1rem;
+}
+
+.navList {
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.navItems {
+  color: var(--color-dark-grayish-blue);
+}
+
+.menuButton {
+  display: block;
+}
+
+@media (width >= 768px) {
+  .nav {
+    position: static;
+    display: flex !important;
+    background-color: transparent;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .navList {
+    display: flex;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .closeMenuButton,
+  .menuButton {
+    display: none;
+  }
+}
