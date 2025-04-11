@@ -44,6 +44,10 @@
   color: var(--color-dark-grayish-blue);
 }
 
+.navItems:hover {
+  color: var(--color-soft-red);
+}
+
 .menuButton {
   display: block;
 }

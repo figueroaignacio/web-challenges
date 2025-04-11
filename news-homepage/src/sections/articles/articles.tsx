@@ -34,7 +34,7 @@ export function Articles() {
             />
             <div className={styles.articleCardContent}>
               <span>{item.number}</span>
-              <h2>{item.title}</h2>
+              <a href="#">{item.title}</a>
               <p>{item.description}</p>
             </div>
           </div>

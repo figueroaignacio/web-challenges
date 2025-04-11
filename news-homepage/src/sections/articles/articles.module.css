@@ -28,9 +28,13 @@
     color: var(--color-grayish-blue);
   }
 
-  & h2 {
+  & a {
     font-size: 1rem;
     font-weight: 700;
+  }
+
+  & a:hover {
+    color: var(--color-soft-red);
   }
 
   & p {

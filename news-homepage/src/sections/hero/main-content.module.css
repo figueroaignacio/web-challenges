@@ -26,6 +26,11 @@
   margin-block: 1rem;
 }
 
+.mainContentButton:hover {
+  background-color: var(--color-very-dark-blue);
+  color: white;
+}
+
 .new {
   background-color: var(--color-very-dark-blue);
   padding: 1rem;
@@ -51,6 +56,10 @@
 
   & li div > a {
     margin-bottom: 0.6rem;
+  }
+
+  & li div > a:hover {
+    color: var(--color-soft-orange);
   }
 
   & li div > p {
