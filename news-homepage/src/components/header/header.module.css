@@ -51,11 +51,12 @@
 @media (width >= 768px) {
   .nav {
     position: static;
-    display: flex !important;
+    display: flex;
     background-color: transparent;
     flex-direction: row;
     gap: 2rem;
     align-items: center;
+    min-height: 0;
   }
 
   .navList {
