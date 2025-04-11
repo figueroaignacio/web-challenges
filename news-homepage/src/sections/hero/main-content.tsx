@@ -22,12 +22,12 @@ export function MainContent() {
     <div className={styles.mainContentBox}>
       <section className={styles.mainContent}>
         <img
-          src="/public/assets/images/image-web-3-mobile.jpg"
+          src="/assets/images/image-web-3-mobile.jpg"
           alt="Hero"
           className={styles.mainContentMobileImg}
         />
         <img
-          src="/public/assets/images/image-web-3-desktop.jpg"
+          src="/assets/images/image-web-3-desktop.jpg"
           alt="Hero"
           className={styles.mainContentDesktopImg}
         />
