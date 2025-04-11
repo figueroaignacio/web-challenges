@@ -19,18 +19,29 @@ const news = [
 
 export function MainContent() {
   return (
-    <>
-      <section className={styles.hero}>
-        <img src="/public/assets/images/image-web-3-mobile.jpg" alt="Hero" />
+    <div className={styles.mainContentBox}>
+      <section className={styles.mainContent}>
+        <img
+          src="/public/assets/images/image-web-3-mobile.jpg"
+          alt="Hero"
+          className={styles.mainContentMobileImg}
+        />
+        <img
+          src="/public/assets/images/image-web-3-desktop.jpg"
+          alt="Hero"
+          className={styles.mainContentDesktopImg}
+        />
         <div>
-          <h1 className={styles.heroTitle}>The Bright Future of Web 3.0?</h1>
+          <h1 className={styles.mainContentTitle}>
+            The Bright Future of Web 3.0?
+          </h1>
           <div>
-            <p className={styles.heroDescription}>
+            <p className={styles.mainContentDescription}>
               We dive into the next evolution of the web that claims to put the
               power of the platforms back into the hands of the people. But is
               it really fulfilling its promise?
             </p>
-            <button className={styles.heroButton}>Read More</button>
+            <button className={styles.mainContentButton}>Read More</button>
           </div>
         </div>
       </section>
@@ -40,13 +51,13 @@ export function MainContent() {
           {news.map((item) => (
             <li>
               <div>
-                <h2>{item.title}</h2>
+                <a href="#">{item.title}</a>
                 <p>{item.description}</p>
               </div>
             </li>
           ))}
         </ul>
       </section>
-    </>
+    </div>
   );
 }

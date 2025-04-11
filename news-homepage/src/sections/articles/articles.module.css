@@ -37,3 +37,10 @@
     color: var(--color-dark-grayish-blue);
   }
 }
+
+@media (width >= 1024px) {
+  .articles {
+    flex-direction: row;
+    margin-block: 5rem;
+  }
+}

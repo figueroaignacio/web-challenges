@@ -1,20 +1,24 @@
-.hero {
+.mainContent {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.heroTitle {
+.mainContentDesktopImg {
+  display: none;
+}
+
+.mainContentTitle {
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--color-very-dark-blue);
 }
 
-.heroDescription {
+.mainContentDescription {
   color: var(--color-dark-grayish-blue);
 }
 
-.heroButton {
+.mainContentButton {
   background-color: var(--color-soft-red);
   padding: 0.75rem 1rem;
   text-transform: uppercase;
@@ -41,17 +45,39 @@
   gap: 1rem;
 
   & li {
-    border-bottom: 1px solid white;
-    padding-bottom: 2rem;
+    border: 1px solid var(--color-dark-grayish-blue);
+    padding: 1.4rem;
   }
 
-  & li div > h2 {
-    font-size: 1.5rem;
+  & li div > a {
     margin-bottom: 0.6rem;
   }
 
   & li div > p {
     font-size: 1rem;
     color: var(--color-grayish-blue);
+  }
+}
+
+@media (width >= 1024px) {
+  .mainContentBox {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .mainContentDesktopImg {
+    display: block;
+  }
+
+  .mainContentMobileImg {
+    display: none;
+  }
+
+  .mainContent > div {
+    display: flex;
+    gap: 4rem;
+    background: var(--color-grayish-blue);
+    padding: 2rem;
+    align-items: center;
   }
 }
